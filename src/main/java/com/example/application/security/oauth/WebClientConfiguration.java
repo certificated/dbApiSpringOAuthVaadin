@@ -26,10 +26,7 @@ public class WebClientConfiguration {
             @Value("${spring.security.oauth2.client.provider.dbApi.authorization-uri}") String authorizationUri,
             @Value("${spring.security.oauth2.client.provider.dbApi.token-uri}") String tokenUri,
             @Value("${spring.security.oauth2.client.provider.dbApi.jwk-set-uri}") String jwkSetUri,
-            @Value("${spring.security.oauth2.client.provider.dbApi.user-info-uri}") String userInfoUri,
-            @Value("${spring.security.oauth2.client.registration.github.client-id}") String gitHubClientId,
-            @Value("${spring.security.oauth2.client.registration.github.client-secret}") String gitHubClientSecret
-
+            @Value("${spring.security.oauth2.client.provider.dbApi.user-info-uri}") String userInfoUri
     ) {
 
         List<String> scopes = Stream.of(scope.split(","))
@@ -49,13 +46,7 @@ public class WebClientConfiguration {
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .build();
 
-        ClientRegistration githubRegristration =
-                CommonOAuth2Provider.GITHUB.getBuilder("github")
-                        .clientId(gitHubClientId)
-                        .clientSecret(gitHubClientSecret)
-                        .build();
-
-        return new InMemoryClientRegistrationRepository(dbApiRegistration, githubRegristration);
+        return new InMemoryClientRegistrationRepository(dbApiRegistration);
     }
 
 }

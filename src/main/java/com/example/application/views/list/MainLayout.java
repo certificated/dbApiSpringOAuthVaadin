@@ -34,8 +34,12 @@ public class MainLayout extends AppLayout {
         RouterLink listView = new RouterLink("Cash Accounts", CashAccountListView.class);
         listView.setHighlightCondition(HighlightConditions.sameLocation());
 
+        RouterLink addresseslistView = new RouterLink("Addresses", AddressListView.class);
+        listView.setHighlightCondition(HighlightConditions.sameLocation());
+
         addToDrawer(new VerticalLayout(
             listView,
+            addresseslistView,
             new RouterLink("Dashboard", DashboardView.class)
         ));
     }

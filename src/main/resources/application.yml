@@ -13,17 +13,14 @@ spring:
     oauth2:
       client:
         registration:
-          github:
-            client-id:
-            client-secret:
           dbApi:
             client-name:
-            client-id:
-            client-secret:
+            client-id: bd142913-d77f-47d4-9dba-07480744a67a
+            client-secret: AINX8L1FI6qRq8npYPsA8aPnbdZvegOJ05PpRCrItepsMTWt5PUe9s10CjOP6KEJCAIkxTBsgtWsS5EjOaVKKYU
             client-authentication-method: basic
             authorization-grant-type: authorization_code
             redirect-uri: http://localhost:8080/login/oauth2/code/dbApi
-            scope: offline_access,openid,read_accounts,read_transactions
+            scope: offline_access,openid,read_accounts,read_transactions,read_addresses,read_partners,read_credit_card_transactions,read_credit_cards_list_with_details
         provider:
           dbApi:
             authorization-uri: https://simulator-api.db.com/gw/oidc/authorize
@@ -45,3 +42,4 @@ dbApi:
   url:
     cashAccounts: https://simulator-api.db.com/gw/dbapi/banking/cashAccounts/v2
     cashAccountTransactions: https://simulator-api.db.com/gw/dbapi/banking/transactions/v2/
+    readAddresses: https://simulator-api.db.com/gw/dbapi/referenceData/addresses/v2
