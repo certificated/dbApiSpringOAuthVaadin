@@ -10,7 +10,6 @@ import com.vaadin.flow.router.Route;
 import javax.annotation.security.PermitAll;
 import java.util.List;
 
-
     @Route(value = "Addresses", layout = MainLayout.class)
     @PermitAll
     public class AddressListView extends VerticalLayout {

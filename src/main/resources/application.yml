@@ -43,3 +43,4 @@ dbApi:
     cashAccounts: https://simulator-api.db.com/gw/dbapi/banking/cashAccounts/v2
     cashAccountTransactions: https://simulator-api.db.com/gw/dbapi/banking/transactions/v2/
     readAddresses: https://simulator-api.db.com/gw/dbapi/referenceData/addresses/v2
+    Creditcards: https://simulator-api.db.com/gw/dbapi/cards/creditCards/v1

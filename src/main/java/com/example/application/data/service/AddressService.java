@@ -14,7 +14,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Service
-public class AddressService {
+public class    AddressService {
     @Autowired
     AppProperties appProperties;
 
