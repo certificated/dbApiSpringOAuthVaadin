@@ -43,7 +43,7 @@ public class CashAccountListView extends VerticalLayout {
         cashAccountsGrid.setItems(cashAccounts);
 
         cashAccountsGrid.addColumn(new ComponentRenderer<>(item -> {
-            Button getTransactionsButton = new Button("Get Transactions");
+            Button getTransactionsButton = new Button("Transactions");
                 getTransactionsButton.addClickListener(click -> UI.getCurrent().navigate(CashAccountTransactionsListView.class, new RouteParameters("iban", item.getIban())));
                 HorizontalLayout editLayout = new HorizontalLayout(getTransactionsButton);
                 editLayout.setWidth("100%");
